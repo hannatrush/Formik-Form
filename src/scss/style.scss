@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #7ed8d6;
+}
+
+.tab-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto 50px;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fafafa;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.active-tab {
+    color: #fafafa;
+}
+
+.tab {
+    color: #fafafa;
+    opacity: 0.52;
+}
+
+.form-wrapper {
+    background: #32425b;
+    max-width: 900px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 45px;
+}
+
+.form-box {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 350px;
+    gap: 30px;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 200;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.input-container {
+    position: relative;
+    display: block;
+}
+
+select {
+    width: 350px;
+    background: #32425b;
+    color: #fafafa;
+    font-size: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid #fafafa;
+
+    &:active {
+        border: 1px solid #1bd6bb;
+    }
+}
+
+input {
+    width: 100%;
+    background: #32425b;
+    color: #fafafa;
+    font-size: 15px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.input-wrapper {
+    border: 1px solid #fafafa;
+
+    &:focus {
+        border: 1px solid #1bd6bb;
+        border-radius: 0px;
+        outline: none;
+    }
+   
+}
+
+.checkbox-wrapper {
+    display: flex;
+}
+
+.checkbox {
+    margin-right: 0 20px 10px 0;
+    padding: 0;
+    width: 30px;
+}
+.checkbox-text{
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.input-errors {
+    border: 1px solid #fc8181;
+    outline: none;
+}
+
+.error {
+    position: absolute;
+    bottom: -35px;
+    color: #fc8181;
+    font-size: 12px;
+}
+
+.btn {
+    max-width: 350px;
+    width: 100%;
+    background: #1bd6bb;
+    color: #fafafa;
+    border: none;
+    padding: 15px;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 200;
+
+    &:hover {
+        cursor: pointer;
+        background: #15cfb3;
+    }
+
+    &:disabled {
+        opacity: 0.52;
+    }
+}

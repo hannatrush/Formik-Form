@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Form from './components/Form';
+import FormikForm from './components/FormikForm';
 
 function App() {
+  const [currentTab, setCurrentTab] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className='form-wrapper'>
+    <div className='tab-wrapper'>
+      <div 
+        className={currentTab === 1 ? 'activeTab' : 'tab'}
+        onClick={() => setCurrentTab(1)}
+      >
+        useFormik
+      </div>
+      <div 
+        className={currentTab === 2 ? 'activeTab' : 'tab'}
+        onClick={() => setCurrentTab(2)}
+      >
+        Formik
+      </div>
     </div>
+    {currentTab === 1 ? <Form/> : <FormikForm/>}
+   </div>
   );
 }
 
